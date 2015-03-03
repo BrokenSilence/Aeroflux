@@ -110,6 +110,7 @@ public class Jetpack : MonoBehaviour {
 	
 	void StopJetpack(){
 		_isFlying = false;
+		PlayerStats._isUsingEnergy = false;
 		if (rigidbody.velocity.y > 20){
 			rigidbody.velocity = new Vector3(0, 20, 0);
 		}
@@ -126,7 +127,6 @@ public class Jetpack : MonoBehaviour {
 			float EnergyScaleCalc = PlayerStats.Energy / PlayerStats.EnergyMax;
 			EnergyBar.transform.localScale = new Vector3(EnergyScaleCalc, 1, 1);
 		} else {
-			PlayerStats._isUsingEnergy = false;
 			_jetpackReset = true;
 			_canFly = false;
 			_isFlying = false;
