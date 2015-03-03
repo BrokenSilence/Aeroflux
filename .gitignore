@@ -1,0 +1,12 @@
+Library/
+Temp/
+Build/
+WebTests/
+DesktopTests/
+
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+*.DS_store
